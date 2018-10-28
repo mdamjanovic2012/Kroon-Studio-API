@@ -53,7 +53,12 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'kroonstd1993@gmail.com	'
+EMAIL_HOST_PASSWORD = 'kroonstd27@'
 REST_USE_JWT = True
 
 REST_FRAMEWORK = {
@@ -82,7 +87,7 @@ ROOT_URLCONF = 'KroonStudioPDT.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'templates', 'registration')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {

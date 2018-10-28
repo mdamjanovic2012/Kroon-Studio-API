@@ -31,6 +31,7 @@ router.register(r'articles', views.ArticleViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
+    url(r'^', include('django.contrib.auth.urls')),
     url('^api/', include(router.urls)),
     url('^api-doc/$', schema_view),
     url('^api-auth/', include('rest_auth.urls')),
