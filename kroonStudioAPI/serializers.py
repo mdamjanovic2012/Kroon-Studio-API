@@ -10,17 +10,23 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('url', 'username', 'email', 'password')
 
 
-class ArticleSerializer(serializers.HyperlinkedModelSerializer):
-    user = serializers.PrimaryKeyRelatedField(many=False,source='article_usr', read_only=True)
-    category = serializers.PrimaryKeyRelatedField(many=False, source='article_cat', read_only=True)
-
-    class Meta:
-        model = Article
-        fields = ('title', 'content', 'updated_at', 'created_at', 'category', 'user')
-
-
 class CategorySerializer(serializers.HyperlinkedModelSerializer):
+    title = serializers.CharField(required=True, max_length=100, allow_blank=False)
 
     class Meta:
         model = Category
-        fields = ('title',)
+        fields = ('id', 'title',)
+
+
+class ArticleSerializer(serializers.HyperlinkedModelSerializer):
+    created_by_user_id = serializers.PrimaryKeyRelatedField(many=False, default=serializers.CurrentUserDefault(), read_only=True)
+    title = serializers.CharField(required=True, max_length=100, allow_blank=False)
+
+    class Meta:
+        model = Article
+        fields = ('id', 'title', 'category_id', 'content', 'updated_at', 'created_by_user_id')
+
+    def to_representation(self, instance):
+        representation = super(ArticleSerializer, self).to_representation(instance)
+        representation['category_id'] = CategorySerializer(instance.category_id).data
+        return representation
