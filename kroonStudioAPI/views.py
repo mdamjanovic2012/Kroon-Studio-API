@@ -21,7 +21,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
 
     def get_permissions(self): # Only admin can edit categories
         if self.action in ['update', 'partial_update', 'destroy']:
-            self.permission_classes = [permissions.CategoryEditPermission, ]
+            self.permission_classes = [IsAdminUser]
 
         return super(self.__class__, self).get_permissions()
 
