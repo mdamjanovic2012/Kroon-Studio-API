@@ -16,13 +16,20 @@ All requirements are in requirements/requirements.txt file
 pip install requirements/requirements.txt
 
 ```
-  Inside project, there is virtual environment (.env_krn) with all requirements already installed.
+  Inside project, there is virtual environment (.ent_kroon) with all requirements already installed.
 ```
 
 ## Running
 
   All API endpoints are in this location: http://127.0.0.1:8000/api/
-
+     
+## Running celery task for sending email reports
+```  
+  celery -A KroonStudioPDT beat -l info
+  
+  celery -A KroonStudioPDT worker -l info
+```  
+ 
 ## Documentation
 
   API documentation is made with Swagger: http://127.0.0.1:8000/api-doc/
