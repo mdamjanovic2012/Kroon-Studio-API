@@ -1,11 +1,630 @@
-<!DOCTYPE html>
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-            <title>title</title>
-    </head>
-    <body>
-        <li><a href="{{ primary }} %}">{{ primary }}</a></li>
-    </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mc="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Newsletter</title>
+  <!--[if (gte mso 9)|(IE)]>
+      <style type="text/css">
+        .bodyContentTwoColumn {
+          padding: 0 !important;
+        }
+      </style>
+  <![endif]-->
+
+  <style type="text/css">
+    /* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+    #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+    .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+    body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+    table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+    td ul li {
+      font-size: 16px;
+    }
+    /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+    body{margin:0; padding:0;}
+    img{
+      max-width:100%;
+      border:0;
+      line-height:100%;
+      outline:none;
+      text-decoration:none;
+    }
+    table{border-collapse:collapse !important;}
+    .content {width: 100%; max-width: 600px;}
+    .content img { height: auto; min-height: 1px; }
+
+    #bodyTable{margin:0; padding:0; width:100% !important;}
+    #bodyCell{margin:0; padding:0;}
+    #bodyCellFooter{margin:0; padding:0; width:100% !important;padding-top:39px;padding-bottom:15px;}
+    body {margin: 0; padding: 0; min-width: 100%!important;}
+
+    #templateContainerHeader{
+      font-size: 14px;
+      padding-top:2.429em;
+      padding-bottom:0.929em;
+    }
+    #templateContainerFootBrd{
+      border-bottom:1px solid #e2e2e2;
+      border-left:1px solid #e2e2e2;
+      border-right:1px solid #e2e2e2;
+      border-radius: 0 0 4px 4px;
+      background-clip: padding-box;
+      border-spacing: 0;
+      height: 10px;
+      width:100% !important;
+    }
+    #templateContainer{
+      border-top:1px solid #e2e2e2;
+      border-left:1px solid #e2e2e2;
+      border-right:1px solid #e2e2e2;
+      border-radius: 4px 4px 0 0 ;
+      background-clip: padding-box;
+      border-spacing: 0;
+    }
+    #templateContainerMiddle {
+      border-left:1px solid #e2e2e2;
+      border-right:1px solid #e2e2e2;
+    }
+    #templateContainerMiddleBtm {
+      border-left:1px solid #e2e2e2;
+      border-right:1px solid #e2e2e2;
+      border-bottom:1px solid #e2e2e2;
+      border-radius: 0 0 4px 4px;
+      background-clip: padding-box;
+      border-spacing: 0;
+    }
+
+    /**
+    * @tab Page
+    * @section heading 1
+    * @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+    * @style heading 1
+    */
+    h1{
+      color:#2e2e2e;
+      display:block;
+      font-family:Helvetica;
+      font-size:26px;
+      line-height:1.385em;
+      font-style:normal;
+      font-weight:normal;
+      letter-spacing:normal;
+      margin-top:0;
+      margin-right:0;
+      margin-bottom:15px;
+      margin-left:0;
+      text-align:left;
+    }
+
+    /**
+    * @tab Page
+    * @section heading 2
+    * @tip Set the styling for all second-level headings in your emails.
+    * @style heading 2
+    */
+    h2{
+      color:#2e2e2e;
+      display:block;
+      font-family:Helvetica;
+      font-size:22px;
+      line-height:1.455em;
+      font-style:normal;
+      font-weight:normal;
+      letter-spacing:normal;
+      margin-top:0;
+      margin-right:0;
+      margin-bottom:15px;
+      margin-left:0;
+      text-align:left;
+    }
+
+    /**
+    * @tab Page
+    * @section heading 3
+    * @tip Set the styling for all third-level headings in your emails.
+    * @style heading 3
+    */
+    h3{
+      color:#545454;
+      display:block;
+      font-family:Helvetica;
+      font-size:18px;
+      line-height:1.444em;
+      font-style:normal;
+      font-weight:normal;
+      letter-spacing:normal;
+      margin-top:0;
+      margin-right:0;
+      margin-bottom:15px;
+      margin-left:0;
+      text-align:left;
+    }
+
+    /**
+    * @tab Page
+    * @section heading 4
+    * @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+    * @style heading 4
+    */
+    h4{
+      color:#545454;
+      display:block;
+      font-family:Helvetica;
+      font-size:14px;
+      line-height:1.571em;
+      font-style:normal;
+      font-weight:normal;
+      letter-spacing:normal;
+      margin-top:0;
+      margin-right:0;
+      margin-bottom:15px;
+      margin-left:0;
+      text-align:left;
+    }
+
+
+    h5{
+      color:#545454;
+      display:block;
+      font-family:Helvetica;
+      font-size:13px;
+      line-height:1.538em;
+      font-style:normal;
+      font-weight:normal;
+      letter-spacing:normal;
+      margin-top:0;
+      margin-right:0;
+      margin-bottom:15px;
+      margin-left:0;
+      text-align:left;
+    }
+
+
+    h6{
+      color:#545454;
+      display:block;
+      font-family:Helvetica;
+      font-size:12px;
+      line-height:2.000em;
+      font-style:normal;
+      font-weight:normal;
+      letter-spacing:normal;
+      margin-top:0;
+      margin-right:0;
+      margin-bottom:15px;
+      margin-left:0;
+      text-align:left;
+    }
+
+    p {
+      color:#545454;
+      display:block;
+      font-family:Helvetica;
+      font-size:16px;
+      line-height:1.500em;
+      font-style:normal;
+      font-weight:normal;
+      letter-spacing:normal;
+      margin-top:0;
+      margin-right:0;
+      margin-bottom:15px;
+      margin-left:0;
+      text-align:left;
+    }
+
+    .unSubContent a:visited { color: #a1a1a1; text-decoration:underline; font-weight:normal;}
+    .unSubContent a:focus   { color: #a1a1a1; text-decoration:underline; font-weight:normal;}
+    .unSubContent a:hover   { color: #a1a1a1; text-decoration:underline; font-weight:normal;}
+    .unSubContent a:link   { color: #a1a1a1 ; text-decoration:underline; font-weight:normal;}
+    .unSubContent a .yshortcuts   { color: #a1a1a1 ; text-decoration:underline; font-weight:normal;}
+
+    .unSubContent h6 {
+      color: #a1a1a1;
+      font-size: 12px;
+      line-height: 1.5em;
+      margin-bottom: 0;
+    }
+
+    .bodyContent, .bodyContentTwoColumn{
+      color:#505050;
+      font-family:Helvetica;
+      font-size:14px;
+      line-height:150%;
+      padding-top:3.143em;
+      padding-right:3.5em;
+      padding-left:3.5em;
+      padding-bottom:0.714em;
+      text-align:left;
+    }
+    .bodyContentImage {
+      color:#505050;
+      font-family:Helvetica;
+      font-size:14px;
+      line-height:150%;
+      padding-top:0;
+      padding-right:3.571em;
+      padding-left:3.571em;
+      padding-bottom:2em;
+      text-align:left;
+    }
+
+    .bodyContentImage h4 {
+      color: #4E4E4E;
+      font-size: 13px;
+      line-height: 1.154em;
+      font-weight:normal;
+      margin-bottom: 0;
+    }
+    .bodyContentImage h5 {
+      color: #828282;
+      font-size: 12px;
+      line-height: 1.667em;
+      margin-bottom: 0;
+    }
+
+    /**
+    * @tab Body
+    * @section body link
+    * @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+    */
+    a:visited { color: #3386e4; text-decoration:none;}
+    a:focus   { color: #3386e4; text-decoration:none;}
+    a:hover   { color: #3386e4; text-decoration:none;}
+    a:link   { color: #3386e4 ; text-decoration:none;}
+    a .yshortcuts   { color: #3386e4 ; text-decoration:none;}
+
+    .bodyContent img, .bodyContentTwoColumn img {
+      height:auto;
+      max-width:498px;
+    }
+
+    .footerContent{
+      color:#808080;
+      font-family:Helvetica;
+      font-size:10px;
+      line-height:150%;
+      padding-top:2.000em;
+      padding-right:2.000em;
+      padding-bottom:2.000em;
+      padding-left:2.000em;
+      text-align:left;
+    }
+
+    /**
+    * @tab Footer
+    * @section footer link
+    * @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+    */
+    .footerContent a:link, .footerContent a:visited, /* Yahoo! Mail Override */ .footerContent a .yshortcuts, .footerContent a span /* Yahoo! Mail Override */{
+       color:#606060;
+       font-weight:normal;
+       text-decoration:underline;
+    }
+
+    /**
+    * @tab Footer
+    * @section footer link
+    * @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+    */
+    #templateContainerImageFull { border-left:1px solid #e2e2e2; border-right:1px solid #e2e2e2; }
+    .bodyContentImageFull p { font-size:0 !important; margin-bottom: 0 !important; }
+    .brdBottomPadd-lg { border-bottom: 1px solid #f0f0f0; }
+    .brdBottomPadd-lg .bodyContent, .brdBottomPadd-lg .bodyContentTwoColumn { padding-bottom: 2.286em; }
+    .brdBottomPadd { border-bottom: 1px solid #f0f0f0; }
+    .brdBottomPadd .bodyContent, .brdBottomPadd .bodyContentTwoColumn { padding-bottom: 0em; }
+    a.blue-btn {
+      background: #5098ea;
+      display: inline-block;
+      color: #FFFFFF;
+      border-top:10px solid #5098ea;
+      border-bottom:10px solid #5098ea;
+      border-left:20px solid #5098ea;
+      border-right:20px solid #5098ea;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 1.0em;
+      border-radius: 3px 3px 3px 3px;
+      background-clip: padding-box;
+    }
+    .bodyContentNewsLetterDate {
+      color:#505050;
+      font-family:Helvetica;
+      font-size:14px;
+      line-height:150%;
+      padding-top:1.571em;
+      padding-right:1.714em;
+      padding-left:1.714em;
+      padding-bottom:0;
+      text-align:left;
+    }
+    .bodyContentNewsLetter {
+      color:#505050;
+      font-family:Helvetica;
+      font-size:14px;
+      line-height:150%;
+      padding-top:0em;
+      padding-right:3.5em;
+      padding-left:3.5em;
+      padding-bottom:0.714em;
+      text-align:left;
+    }
+
+    .two-column {
+      text-align: left;
+      font-size: 0;
+    }
+    .two-column img {
+      max-width: 100%;
+    }
+    .two-column .column {
+      width: 100%;
+      max-width: 46%;
+      display: inline-block;
+      vertical-align: top;
+      color:#505050;
+      font-family:Helvetica;
+      font-size:14px;
+      line-height:150%;
+      margin-bottom: 2.000em;
+    }
+    .two-column .column h4 {
+      margin-bottom: 8px;
+    }
+    .two-column .columnspace {
+      width: 100%;
+      max-width: 8%;
+      display: inline-block;
+      vertical-align: top;
+      color:#505050;
+      font-family:Helvetica;
+      font-size:14px;
+      line-height:150%;
+    }
+
+    @media only screen and (max-width: 480px), screen and (max-device-width: 480px) {
+      h1 {
+        font-size:34px !important;
+      }
+      h2{
+        font-size:30px !important;
+      }
+      h3{
+        font-size:24px !important;
+      }
+      h4{
+        font-size:18px !important;
+      }
+      h5{
+        font-size:16px !important;
+      }
+      h6{
+        font-size:14px !important;
+      }
+      p {
+        font-size: 18px !important;
+      }
+      .brdBottomPadd .bodyContent, .brdBottomPadd .bodyContentTwoColumn { padding-bottom: 0em !important; }
+      .brdBottomPadd-lg .bodyContent, .brdBottomPadd-lg .bodyContentTwoColumn { padding-bottom: 2.286em !important; }
+      .bodyContent, .bodyContentTwoColumn { padding: 6% 5% 1% 6% !important; }
+      .bodyContentNewsLetter { padding: 6% 5% 2% 6% !important; }
+      .bodyContent img, .bodyContentTwoColumn img {
+        max-width: 100% !important;
+      }
+      .bodyContentImage {
+        padding: 3% 6% 6% 6% !important;
+      }
+      .bodyContentImage img {
+        max-width: 100% !important;
+      }
+      .bodyContentImage h4 {
+        font-size: 16px !important;
+      }
+      .bodyContentImage h5 {
+        font-size: 15px !important;
+        margin-top:0;
+      }
+      table.column {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 2em !important;
+      }
+      table.column img {
+        width: 100%;
+        height: auto;
+      }
+      table.column h4 {
+        margin-bottom: 12px !important;
+      }
+      table.columnspace {
+        height: 0em !important;
+      }
+      .bodyContentNewsLetterDate h5 {
+        font-size: 14px !important;
+      }
+      .hide {display:none !important;}
+    }
+    @media only screen and (max-width: 550px), screen and (max-device-width: 550px) {
+      body[yahoo] .hide {display: none!important;}
+      body[yahoo] .buttonwrapper {background-color: transparent!important;}
+      body[yahoo] .button {padding: 0px!important;}
+      body[yahoo] .button a {background-color: #e05443; padding: 15px 15px 13px!important;}
+      body[yahoo] .unsubscribe { font-size: 14px; display: block; margin-top: 0.714em; padding: 10px 50px; background: #2f3942; border-radius: 5px; text-decoration: none!important;}
+    }
+    .ii a[href] {color: inherit !important;}
+    span > a, span > a[href] {color: inherit !important;}
+    a > span, .ii a[href] > span {text-decoration: inherit !important;}
+  </style>
+
+</head>
+
+<body yahoo bgcolor="#ffffff">
+<table width="100%" bgcolor="#ffffff" border="0" cellpadding="10" cellspacing="0">
+<tr>
+  <td>
+    <!--[if (gte mso 9)|(IE)]>
+      <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td>
+    <![endif]-->
+    <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td valign="top" mc:edit="headerBrand" id="templateContainerHeader">
+
+					<p style="text-align:center;margin:0;padding:0;">
+						<img src="http://c0185784a2b233b0db9b-d0e5e4adc266f8aacd2ff78abb166d77.r51.cf2.rackcdn.com/templates/cog-01.jpg" style="display:inline-block; max-width: 100%;" />
+					</p>
+
+				</td>
+			</tr>
+      <tr>
+				<td align="center" valign="top">
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateContainer">
+            <tr>
+							<td valign="top" class="bodyContentNewsLetterDate" mc:edit="body_content_newsletter_01">
+                <h5 style="text-align:right;"><strong>{{ month }} {{ year }}</strong></h5>
+							</td>
+						</tr>
+            <tr>
+							<td valign="top" class="bodyContentNewsLetter" mc:edit="body_content_newsletter_02">
+                <p>HI {{ user.username }}!</p>
+
+                <h1><strong>What’s new in {{ month }}</strong></h1>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+      <tr>
+				<td align="center" valign="top">
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateContainerImageFull" style="min-height:15px;">
+						<tr>
+              <td width="1">
+                <img src="http://localhost:3000/static/media/ext.dccecf1c.jpg" style="width: 1px; display:block; margin:0; padding:0; border:0;"/>
+              </td>
+							<td valign="top" class="bodyContentImageFull" mc:edit="body_content_01">
+                <!-- STOP DELETINGGGGGGGGGGGG -->
+                <p style="text-align:center;margin:0;padding:0;float:right;">
+      						<img src="https://media.licdn.com/media-proxy/ext?w=800&h=800&hash=VL5M4nSj2JYV7hilcx7mU0zy5lM%3D&ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R6nlh8Tw1It6a2FowGz60oISIfYC2G8G2f1spyfNT-tdoDSeLChpEtOdSoDmBJkcrG-GGGiSp7tXMC7P9gp1M2BRcq-I1UkWTEUtHwW1v8oG0wUlNH1Ia3_ci8Tg6kKTi6bEZrdX1Y0OCgn2sDbIZHpHHsz6WfJH_v5OPpRX-5H4tFvwgddgfj3ROgT3dt4ml587Uvpqq72EwsDpqGNPHeRJFszNWn5b992p6bU6GfalnzY" style="display:block; margin:0; padding:0; border:0; max-width: 100%;" />
+      					</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+            <tr>
+				<td align="center" valign="top">
+						<!-- BEGIN BODY // -->
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateContainerMiddle" class="brdBottomPadd">
+							<tr>
+								<td valign="top" class="bodyContentTwoColumn">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        {% for artcl in articles %}
+                                            {% if forloop.first %}
+                                                <tr valign="top">
+                                                  <td class="two-column">
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    <table width="600">
+                                                    <tr>
+                                                      <td valign="top" height="50">
+                                                        <img height="50px" style="display: block; margin: 0; padding: 0; border: 0;" src="http://c0185784a2b233b0db9b-d0e5e4adc266f8aacd2ff78abb166d77.r51.cf2.rackcdn.com/blank.png" />
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td width="50" valign="top">
+                                                      <img width="50px" style="display: block; margin: 0; padding: 0; border: 0;" src="http://c0185784a2b233b0db9b-d0e5e4adc266f8aacd2ff78abb166d77.r51.cf2.rackcdn.com/blank.png" />
+                                                    </td>
+                                                    <td width="230" valign="top">
+                                                    <![endif]-->
+                                            {% elif forloop.counter0|divisibleby:2 %}
+                                                <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    <td width="50" valign="top">
+                                                      <img width="50px" style="display: block; margin: 0; padding: 0; border: 0;" src="http://c0185784a2b233b0db9b-d0e5e4adc266f8aacd2ff78abb166d77.r51.cf2.rackcdn.com/blank.png" />
+                                                    </td>
+                                                    </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                  </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                  <td class="two-column">
+                                            {% endif %}
+                                            <table class="column">
+                                              <tr>
+                                                <td class="text" mc:edit="body_content_col1">
+                                                  <p><img src="data:image/jpeg;base64,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" style="display:block; max-width: 100%;" /></p>
+                                                  <h4><strong>{{ artcl.title }}</strong></h4>
+                                                  <h4>{{ artcl.content|truncatechars:70 }}</h4>
+                                                  <h4><a href="http://127.0.0.1:3000/article/{{ artcl.id }}">Read now</a></h4>
+                                                </td>
+                                              </tr>
+                                            </table>
+
+                                        {% endfor %}
+                                        <!--[if (gte mso 9)|(IE)]>
+                                            </td><td width="40" valign="top">
+                                            <![endif]-->
+                                        </td>
+                                        </tr>
+
+
+
+                                    </table>
+								</td>
+							</tr>
+						</table>
+						<!-- // END BODY -->
+					</td>
+			</tr>
+			<tr>
+				<td align="center" valign="top">
+						<!-- BEGIN BODY // -->
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateContainerMiddleBtm">
+									<tr>
+										<td valign="top" class="bodyContent" mc:edit="body_content">
+											<h4>Thanks for being a subscriber. You can view more articles on our <a href="https://www.kroonstudio.com">blog</a>.</h4>
+										</td>
+									</tr>
+							</table>
+							<!-- // END BODY -->
+					</td>
+			</tr>
+			<tr>
+				<td align="center" valign="top" id="bodyCellFooter" class="unSubContent">
+					<table width="100%" border="0" cellpadding="0" cellspacing="0" id="templateContainerFooter">
+						<tr>
+							<td valign="top" width="100%" mc:edit="footer_unsubscribe">
+								<p style="text-align:center;">
+									<img src="http://c0185784a2b233b0db9b-d0e5e4adc266f8aacd2ff78abb166d77.r51.cf2.rackcdn.com/templates/cog-03.jpg" style="margin:0 auto 0 auto;display:inline-block; max-width: 100%;" />
+								</p>
+								<h6 style="text-align:center;margin-top: 9px;">COG Inc</h6>
+								<h6 style="text-align:center;">589&#8203; Howard&#8203; Street&#8203;</h6>
+								<h6 style="text-align:center;">San Francisco,&#8203; CA&#8203; 94105&#8203;</h6>
+								<h6 style="text-align:center;margin-top: 7px;"><a href="--unsubscribe--">unsubscribe</a></h6>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+    </table>
+    <!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+    </table>
+    <![endif]-->
+    </td>
+  </tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" class="hide" width="600">
+  <tr>
+    <td height="1" class="hide" style="min-width:600px; font-size:0px;line-height:0px;">
+      <img height="1" width="600" src="http://c0185784a2b233b0db9b-d0e5e4adc266f8aacd2ff78abb166d77.r51.cf2.rackcdn.com/blank.jpg" style="min-width: 600px; width: 600px; max-height: 1px; min-height: 1px; text-decoration: none; border: none; -ms-interpolation-mode: bicubic;" />
+    </td>
+  </tr>
+</table>
+</body>
 </html>

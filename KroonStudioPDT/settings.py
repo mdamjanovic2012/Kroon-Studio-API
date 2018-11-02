@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
+from datetime import timedelta
 
 import os
 from celery.schedules import crontab
@@ -82,7 +83,7 @@ CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/1"
 CELERY_BEAT_SCHEDULE = {
     'automatic_daily_report': {
         'task': 'kroonStudioAPI.tasks.daily_reports',
-        'schedule': crontab(minute='*/1'),
+        'schedule': crontab(hour=23, minute=0), # Call task in 23:00 every day
         'args': None
     },
 }
