@@ -4,10 +4,9 @@ from rest_framework import serializers
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
-
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'password')
+        fields = ('pk', 'url', 'username', 'email')
 
 
 class CategorySerializer(serializers.HyperlinkedModelSerializer):
@@ -19,7 +18,8 @@ class CategorySerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ArticleSerializer(serializers.HyperlinkedModelSerializer):
-    created_by_user_id = serializers.PrimaryKeyRelatedField(many=False, default=serializers.CurrentUserDefault(), read_only=True)
+    created_by_user_id = UserSerializer(many=False, default=serializers.CurrentUserDefault(),
+                                                            read_only=True)
     title = serializers.CharField(required=True, max_length=100, allow_blank=False)
 
     class Meta:
