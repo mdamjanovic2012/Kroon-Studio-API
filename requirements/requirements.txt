@@ -19,7 +19,7 @@ django-rest-swagger==2.2.0
 djangorestframework==3.9.0
 djangorestframework-jwt==1.11.0
 dnspython==1.15.0
-eventlet==0.24.1
+eventlet==0.31.0
 greenlet==0.4.15
 idna==2.7
 itypes==1.1.0
